@@ -13,6 +13,9 @@ gem 'rails_12factor', group: :production
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda-matchers'
 end
 
 group :development do
