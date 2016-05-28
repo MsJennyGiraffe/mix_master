@@ -1,9 +1,3 @@
-# As a user
-# Given that artists exist in the database
-# When I visit the artists index
-# Then I should see each artist's name
-# And each name should link to that artist's individual page
-
 require 'rails_helper'
 
 RSpec.feature "User views all artists" do
@@ -16,7 +10,7 @@ RSpec.feature "User views all artists" do
 
     visit artists_path
     click_link "Bob Marley"
-    
+
     expect(page).to have_content("Bob Marley")
     expect(page).to have_css("img[src=\"#{artist_image_path}\"]")
   end

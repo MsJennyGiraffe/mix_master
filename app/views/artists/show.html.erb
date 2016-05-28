@@ -1,2 +1,3 @@
 <h1><%= @artist.name %></h1>
 <%= image_tag @artist.image_path %>
+<%= link_to "Edit", edit_artist_path(@artist.id) %>
