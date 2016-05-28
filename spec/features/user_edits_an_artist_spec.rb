@@ -14,7 +14,4 @@ RSpec.feature "User edits an artist" do
     expect(page).to have_content("The New Bob Marley")
     expect(page).to have_css("img[src=\"#{artist_image_path}\"]")
   end
-
-
-
 end
