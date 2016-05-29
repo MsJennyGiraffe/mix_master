@@ -1,18 +1,2 @@
-<%= form_for(@artist) do |form| %>
-  <% if @artist.errors.any? %>
-    <h2> <%= pluralize(@artist.errors.count, "error") %>  prohibits this record from being saved:</h2>
-    <ul>
-      <% @artist.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-        <% end %>
-      </ul>
-    <% end %>
-    
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-
-  <%= form.label :image_path %>
-  <%= form.text_field :image_path %>
-
-  <%= form.submit %>
-<% end  %>
+<h1>New Artist</h1>
+<%= render partial: "partials/form" %>
