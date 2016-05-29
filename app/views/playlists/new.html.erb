@@ -1,13 +1,3 @@
 <h1>New Playlist</h1>
 
-<%= form_for(@playlist) do |form| %>
-  <%= form.text_field :name %>
-
-  <% Song.all.each do |song| %>
-    <div>
-      <%= check_box_tag :song_ids, song.id, false, name: 'playlist[song_ids][]', id: "song-#{song.id}" %>
-      <li><%= song.title %></li>
-    </div>
-  <% end %>
-  <%= form.submit %>
-<% end %>
+<%= render partial: "partials/checkboxes" %>

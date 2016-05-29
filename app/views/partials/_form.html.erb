@@ -1,0 +1,11 @@
+<%= form_for(@artist) do |form| %>
+  <%= render partial: "partials/error", locals: { target: @artist } %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+<br>
+  <%= form.label :image_path %>
+  <%= form.text_field :image_path %>
+<br><br>
+  <%= form.submit %>
+<% end  %>
