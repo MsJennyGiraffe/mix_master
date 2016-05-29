@@ -1,0 +1,7 @@
+<h1>Songs</h1>
+
+<% @songs.each do |song| %>
+  <%= song.title %> by <%= song.artist.name %><br>
+<% end %>
+
+<%= link_to "Home", root_path %>
