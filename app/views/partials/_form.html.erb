@@ -1,12 +1,5 @@
 <%= form_for(@artist) do |form| %>
-  <% if @artist.errors.any? %>
-    <h2> <%= pluralize(@artist.errors.count, "error") %>  prohibits this record from being saved:</h2>
-    <ul>
-      <% @artist.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-        <% end %>
-      </ul>
-    <% end %>
+  <%= render partial: "partials/error", locals: { target: @artist } %>
 
   <%= form.label :name %>
   <%= form.text_field :name %>
