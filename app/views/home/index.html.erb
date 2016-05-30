@@ -1,11 +1,42 @@
-<h1>Mix Master</h1>
+<div class="container">
+  <h1 class="text-center">Mix Master</h1>
+</div>
 
-<%= link_to "Playlists", playlists_path %>
-<br>
-<%= link_to "Songs", songs_path %>
-<br>
-<%= link_to "Artists", artists_path %>
-<br><br>
-<a href="https://github.com/turingschool/lesson_plans/tree/master/ruby_02-web_applications_with_ruby/mix_master">Make Your Own!</a>
-<br>
-<a href="https://github.com/MsJennyGiraffe/mix_master">Github Repository</a>
+<div class="well">
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="btn btn-default btn-block">
+        <h4><%= link_to "Playlists", playlists_path %></h4>
+      </div>
+      <div class="text-center">
+        <br>
+        <p> See a collection of the playlists others have made! </p>
+        <p> Make your own playlists! </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="btn btn-default btn-block">
+        <h4><%= link_to "Songs", songs_path %></h4>
+      </div>
+      <div class="text-center">
+        <br>
+        <p> See a collection of all the songs! </p>
+      </div>
+    </div>
+
+      <div class="col-md-4">
+        <div class="btn btn-default btn-block">
+        <h4><%= link_to "Artists", artists_path %></h4>
+      </div>
+      <div class="text-center">
+        <br>
+        <p> See a collection of all the artists! </p>
+        <p> Don't see your favorite? Add your own! </p>
+        <p> Add songs to artists that totally exist! </p>
+      </div>
+
+    </div>
+  </div>
+</div>
