@@ -1,8 +1,21 @@
-<h1>New Song</h1>
-<p>Add a new song for <%= @artist.name %></p>
-<%= form_for([@artist, @song]) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<div class="text-center">
+  <h1>New Song</h1>
+</div>
 
-  <%= f.submit %>
+<div class="text-center">
+  <p>Add a new song for <%= @artist.name %></p>
+</div>
+
+<%= form_for([@artist, @song]) do |f| %>
+  <div class="text-center">
+    <%= f.label :title %>
+  </div>
+  <div class="text-center">
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="text-center">
+    <br>
+    <%= f.submit %>
+  </div>
 <% end %>

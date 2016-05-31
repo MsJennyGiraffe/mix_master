@@ -1,7 +1,15 @@
+<div class="text-center">
 <h1>Songs</h1>
+</div>
+<br><br>
 
-<% @songs.each do |song| %>
-  <%= song.title %> by <%= song.artist.name %><br>
-<% end %>
 
-<%= link_to "Home", root_path %>
+<div class="container">
+  <% @songs.each do |song| %>
+      <div class="col-md-3">
+        <div class="text-center">
+          "<%= link_to song.title, song_path(song) %>" by <%= link_to song.artist.name, artist_path(song.artist) %><br><br />
+        </div>
+      </div>
+  <% end %>
+</div>

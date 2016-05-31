@@ -1,2 +1,8 @@
-<h1><%= @song.title %></h1>
-<%= link_to @song.artist.name, artist_path(@song.artist) %>
+<div class="text-center">
+  <h1><%= @song.title %></h1>
+</div>
+
+<br>
+<div class="text-center">
+<p>This song brought to you by: <%= link_to @song.artist.name, artist_path(@song.artist) %></p>
+</div>
