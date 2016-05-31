@@ -1,10 +1,23 @@
-<h1>All Artists</h1>
+<div class="text-center">
+  <h1>All Artists</h1>
+</div>
 
-<% @artists.each do |artist| %>
-  <%= link_to artist.name, artist_path(artist.id) %><br />
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="btn btn-block button-coloring-one">
+        <%= link_to "New Artist", new_artist_path %>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-<%= link_to "New Artist", new_artist_path %>
-<br>
-<%= link_to "Home", root_path %>
+<div class="container">
+  <% @artists.each do |artist| %>
+      <div class="col-md-3">
+        <div class="text-center">
+          <h4 class="artist-link"><%= link_to artist.name, artist_path(artist.id) %><br /></h4>
+        </div>
+      </div>
+  <% end %>
+</div>

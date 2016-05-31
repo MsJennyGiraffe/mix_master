@@ -1,11 +1,26 @@
 <%= form_for(@artist) do |form| %>
-  <%= render partial: "partials/error", locals: { target: @artist } %>
+  <div class="text-center"><%= render partial: "partials/error", locals: { target: @artist } %></div>
 
-  <%= form.label :name %>
-  <%= form.text_field :name %>
 <br>
-  <%= form.label :image_path %>
-  <%= form.text_field :image_path %>
+  <div class="form-name-padding text-center">
+    <%= form.label :name %>
+  </div>
+
+  <div class="text-center">
+      <%= form.text_field :name %>
+  </div>
+
+  <div class="form-name-padding text-center">
+    <%= form.label :image_path %>
+  </div>
+
+  <div class="text-center">
+    <%= form.text_field :image_path %>
+  </div>
+
 <br><br>
-  <%= form.submit %>
-<% end  %>
+
+  <div class="text-center">
+    <%= form.submit %>
+  </div>
+  <% end  %>

@@ -1,5 +1,49 @@
-<h1><%= @artist.name %></h1>
-<%= image_tag @artist.image_path %>
-<%= link_to "Edit", edit_artist_path(@artist) %><br>
-<%= link_to "Delete", artist_path(@artist), method: :delete %><br>
-<%= link_to "New Song", new_artist_song_path(@artist) %>
+<div class="text-center">
+  <h1><%= @artist.name %></h1>
+</div>
+
+<br><br>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="btn btn-block button-coloring-one">
+        <%= link_to "Edit #{@artist.name}'s information", edit_artist_path(@artist) %><br>
+      </div>
+      <br>
+        <div class="text-center"><p> Edit to change the name of the artist or the display picture.<p></div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="btn btn-block button-coloring-two">
+        <%= link_to "Delete #{@artist.name}", artist_path(@artist), method: :delete %><br>
+      </div>
+      <br>
+      <div class="text-center"><p> Delete the artist from the database. </p>
+        <p>...jerk</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="btn btn-block button-coloring-three">
+        <%= link_to "Add a New Song by #{@artist.name}", new_artist_song_path(@artist) %><br>
+      </div>
+      <br>
+      <div class="text-center"><p> Don't see a song you like from the artist?<p>
+        <p>Add it to the database!</p>
+      </div>
+    </div>
+
+      <div class="col-md-3">
+        <%= image_tag @artist.image_path, style:"height: 250px; width: 250px;", class:"img-rounded" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="col-md-4 col-md-offset-5">
+<div class="btn btn-default">
+  <%= link_to "Back to Artists", artists_path %>
+</div>
+</div>
